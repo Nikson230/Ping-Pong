@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/border.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10.0151, 6.96711 )
+
+[node name="Border" type="RigidBody2D"]
+mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 511.5, 6.6 )
+scale = Vector2( 51.33, 1.02 )
+shape = SubResource( 1 )
+one_way_collision_margin = 0.0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 511.727, 6.60988 )
+scale = Vector2( 256.864, 14.2198 )
+texture = ExtResource( 1 )

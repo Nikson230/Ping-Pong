@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://HUI.gd" type="Script" id=1]
+[ext_resource path="res://assets/Xolonium-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://CheckButton.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+margin_bottom = 388.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftPlayerScore" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightPlayerScore" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_right = 20.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "Ping Pong"
+align = 1
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.521
+anchor_top = 0.24
+anchor_right = 0.521
+anchor_bottom = 0.24
+margin_left = -27.504
+margin_top = -12.8658
+margin_right = 27.496
+margin_bottom = 13.1342
+custom_fonts/font = SubResource( 2 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckButton" type="CheckButton" parent="."]
+anchor_left = 0.531
+anchor_top = 0.456
+anchor_right = 0.531
+anchor_bottom = 0.456
+margin_left = -96.6411
+margin_top = -20.0893
+margin_right = 97.3589
+margin_bottom = 19.9107
+custom_fonts/font = SubResource( 2 )
+text = "Two Players?"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
